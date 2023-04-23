@@ -1,10 +1,10 @@
 //definimos las variables
-function promedio(totalNotas, cantidadNotas ) {
+function calcularPromedio(totalNotas, cantidadNotas ) {
     let promedio = totalNotas / cantidadNotas;
     return promedio;
 }
 
-let cantidadNotas = parceInt(prompt("Ingrese la cantidad de notas"))
+let cantidadNotas = parseInt(prompt("Ingrese la cantidad de notas"))
 
 let totalNotas =0;
 
@@ -18,10 +18,12 @@ let promedio = calcularPromedio(totalNotas, cantidadNotas);
 
 console.log("El promedio de las notas es:" + promedio);
 
-if(promedio > 6) {
+document.body.querySelector("p").innerText = "El promedio fue: " + promedio 
+
+if(promedio > 4) {
     alert("Pasaste de curso!!!")
 }
-else if(promedio > 3) {
+else if(promedio == 4) {
     alert("Pasaste arrastrando")
 }
 else {
